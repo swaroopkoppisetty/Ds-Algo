@@ -1,4 +1,4 @@
-package Arrays;
+package Sorting;
 /*
     Time Complexity -> O(n^2)
     Unstable sort

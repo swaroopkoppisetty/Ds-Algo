@@ -1,4 +1,4 @@
-package Arrays;
+package Sorting;
 /*
     Time complexity -> O(n^2).
     we will populate sorted array from left to right.

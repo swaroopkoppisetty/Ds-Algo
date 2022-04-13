@@ -1,4 +1,4 @@
-package Arrays;
+package Sorting;
 /*
     Bubble Sort
     Time complexity -> O(n^2)
