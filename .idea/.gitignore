@@ -6,3 +6,6 @@
 /misc.xml
 /runConfigurations.xml
 /vcs.xml
+../target
+../.idea
+./Ds-Algo.iml
