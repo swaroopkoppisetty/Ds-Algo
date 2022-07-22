@@ -1,33 +1,30 @@
+package Logicmojo;
 
-import java.math.BigDecimal;
-import java.util.*;
-
-public class Practice {
+public class V4MoveZerosToEnd {
 
     public static void main(String[] args) {
-
         int[] arr = {0, 1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9};
-        move0s(arr);
+        moveZerosToEnd(arr);
         for(int i : arr){
             System.out.println(i);
         }
     }
 
-    public static void move0s(int[] arr){
+    public static void moveZerosToEnd(int[] arr){
 
         int i = 0;
-        int count = 0;
+        int cnt = 0;
+
         while (i < arr.length){
 
+            //move all non zeros elements to left
             if(arr[i] != 0){
                 int temp = arr[i];
-                arr[i] = arr[count];
-                arr[count] = temp;
-                count++;
+                arr[i] = arr[cnt];
+                arr[cnt] = temp;
+                cnt++;
             }
             i++;
         }
     }
-
-
 }
