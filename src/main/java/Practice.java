@@ -5,28 +5,27 @@ import java.util.*;
 public class Practice {
 
     public static void main(String[] args) {
+        List<Long> list = new ArrayList<>();
+        list.add(1L);
+        list.add(2L);
+        list.add(3L);
+        list.add(1L);
 
-        int[] arr = {0, 1, 9, 8, 4, 0, 0, 2, 7, 0, 6, 0, 9};
-        move0s(arr);
-        for(int i : arr){
-            System.out.println(i);
-        }
+        System.out.println(sol(list,4,1));
+
     }
 
-    public static void move0s(int[] arr){
-
-        int i = 0;
+    static int sol(List<Long> A,int n, long k)
+    {
         int count = 0;
-        while (i < arr.length){
-
-            if(arr[i] != 0){
-                int temp = arr[i];
-                arr[i] = arr[count];
-                arr[count] = temp;
-                count++;
+        for(int i = 0; i < n ; i ++){
+            for(int j = 0; j<n;j++){
+                int exp = (int) ((int) (A.get(i) ^ A.get(j)) & k);
+                if(exp == 0)
+                    count++;
             }
-            i++;
         }
+        return count;
     }
 
 
