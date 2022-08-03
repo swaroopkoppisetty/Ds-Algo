@@ -1,17 +1,15 @@
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.*;
 
 public class Practice {
 
     public static void main(String[] args) {
-        List<Long> list = new ArrayList<>();
-        list.add(1L);
-        list.add(2L);
-        list.add(3L);
-        list.add(1L);
 
-        System.out.println(sol(list,4,1));
+        LocalDate todayDate = OffsetDateTime.now().minusHours(5).toLocalDate();
+        System.out.println(todayDate);
 
     }
 

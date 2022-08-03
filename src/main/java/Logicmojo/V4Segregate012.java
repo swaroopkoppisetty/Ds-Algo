@@ -4,7 +4,7 @@ package Logicmojo;
 public class V4Segregate012 {
 
     public static void main(String[] args) {
-        int[] arr = {2,1,1,0,1,2,1,2,0,0,0,1};
+        int[] arr = {0,2,0,1,2};
         Sort012(arr);
         for(int i : arr){
             System.out.println(i);
@@ -13,23 +13,23 @@ public class V4Segregate012 {
 
     public static void Sort012(int[] array)
     {
-       int start = 0;
-       int mid = 0;
-       int end = array.length - 1;
+       int left = 0;
+       int i = 0;
+       int right = array.length - 1;
 
-       while (mid <= end){
+       while (i <= right){
 
-           if(array[mid] == 0){
-               swap(array,mid,start);
-               start++;
-               mid++;
+           if(array[i] == 0){
+               swap(array,i,left);
+               left++;
+               i++;
            }
-           else if(array[mid] == 2){
-               swap(array,end,mid);
-               end--;
+           else if(array[i] == 2){
+               swap(array,i,right);
+               right--;
            }
            else {
-               mid++;
+               i++;
            }
        }
     }

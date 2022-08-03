@@ -1,5 +1,7 @@
 package Logicmojo;
 
+import java.util.HashMap;
+
 public class V1BinarySearch {
 
     public static void main(String[] args) {
@@ -11,6 +13,7 @@ public class V1BinarySearch {
             System.out.println("Found");
         } else
             System.out.println("Not Found");
+
     }
 
     public static boolean binarySearchRecursive(int[] arr, int start, int end, int searchElement){
